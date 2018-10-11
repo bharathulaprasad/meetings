@@ -56,7 +56,11 @@ class Task(Base):
         return format_html("<div style='min-width:100px'>{}</div>", self.user.get_full_name())
 
     def end_date(self):
-        if self.end and self.end < datetime.now().date():
+        if (
+                (self.status == self.NOT_STARTED or self.status == self.OPEN) and
+                self.end and
+                self.end < datetime.now().date()
+        ):
             return format_html("<div style='min-width:80px;background-color:red;color:#FFF; padding:3px'>{}</div>",
                                self.end)
         return format_html("<div style='min-width:80px'>{}</div>", self.end)

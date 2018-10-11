@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: sh run.sh
+    volumes:
+    - data:/data
+    ports:
+    - "13001:8000"
+
+volumes:
+  data: {}
