@@ -20,7 +20,7 @@ Superuser created successfully.
 
 ### Usage
 
-Go to *http://<localhost or ip>:13001* in browser then enter super user credentials. 
+Go to *http://localhost_or_ip:13001* in browser then enter super user credentials. 
 
 **NOTE:** You need to create a super user and then for every user you need to give staff permission
 
