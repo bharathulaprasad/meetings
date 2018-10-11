@@ -20,7 +20,9 @@ Superuser created successfully.
 
 ### Usage
 
-You need to create a super user and then for every user you need to give staff permission
+Go to *http://<localhost or ip>:13001* in browser then enter super user credentials. 
+
+**NOTE:** You need to create a super user and then for every user you need to give staff permission
 
 ### Screen shot
 ![ss](ss.png)
