@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k#x*q^_f92u)86*x(*%!4zkh9m_+a_mu__zzaf635aolwg(=@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -53,7 +53,7 @@ ROOT_URLCONF = 'meetings.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,3 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "meetings/assets/media")
+
+STATIC_ROOT = os.path.join(BASE_DIR, "meetings/assets/static")
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "creator/assets/static-dev"),
+# ]

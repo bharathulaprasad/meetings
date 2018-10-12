@@ -6,7 +6,7 @@ from django.utils.html import format_html
 
 
 class Base(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, help_text="You will be selected.")
     created = models.DateTimeField(auto_now_add=True, editable=False)
     updated = models.DateTimeField(auto_now=True, editable=False)
 
@@ -61,7 +61,7 @@ class Task(Base):
                 self.end and
                 self.end < datetime.now().date()
         ):
-            return format_html("<div style='min-width:80px;background-color:red;color:#FFF; padding:3px'>{}</div>",
+            return format_html("<div style='min-width:80px;background-color:red;color:#FFF;'>{}</div>",
                                self.end)
         return format_html("<div style='min-width:80px'>{}</div>", self.end)
 

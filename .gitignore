@@ -57,7 +57,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
 
 # Flask stuff:
 instance/
@@ -111,3 +110,9 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+meet/migrations/0001_initial.py
+meet/migrations/0002_auto_20181011_1931.py
+meet/migrations/0003_auto_20181011_2003.py
+meet/migrations/0004_auto_20181011_2039.py
+meet/migrations/0005_auto_20181012_2234.py
+meet/templates/
